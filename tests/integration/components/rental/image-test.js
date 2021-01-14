@@ -3,10 +3,10 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render, click } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | rental/image', function(hooks) {
+module('Integration | Component | rental/image', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders the given image', async function(assert) {
+  test('it renders the given image', async function (assert) {
     await render(hbs`
       <Rental::Image
         src="/assets/images/teaching-tomster.png"
@@ -20,7 +20,7 @@ module('Integration | Component | rental/image', function(hooks) {
     assertTomster.hasAttribute('alt', 'Teaching Tomster');
   });
 
-  test('it toggles its size when clicked', async function(assert) {
+  test('it toggles its size when clicked', async function (assert) {
     await render(hbs`
       <Rental::Image
         src="/assets/images/teaching-tomster.png"

@@ -3,11 +3,10 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | rental', function(hooks) {
+module('Integration | Component | rental', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders information about a rental properly', async function(assert) {
-
+  test('it renders information about a rental properly', async function (assert) {
     await render(hbs`<Rental />`);
 
     assert.dom('article').hasClass('rental');
