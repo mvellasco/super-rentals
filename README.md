@@ -46,7 +46,13 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+For Heroku we must use:
+$ heroku buildpacks:clear
+$ heroku buildpacks:add heroku/nodejs
+$ heroku buildpacks:add https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/emberjs.tgz
+
+* This buildpack is currently stale, so it's necessary to go into the repo, download the tar.gz file and upload it by ourselves with .tgz extension.
+https://github.com/heroku/heroku-buildpack-emberjs/issues/61
 
 ## Further Reading / Useful Links
 
